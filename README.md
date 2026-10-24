@@ -1,44 +1,35 @@
-# Full-Stack Tic-Tac-Toe
+# Tic Tac Toe
 
-A full-stack Tic-Tac-Toe web application built with Vanilla JavaScript, Java (Spring Boot 3), and PostgreSQL (Docker).
+A full-stack Tic Tac Toe web application.
 
 ## Tech Stack
-- **Frontend**: Vanilla HTML5, CSS3, JavaScript (Fetch API), served via Nginx
-- **Backend**: Java 21, Spring Boot 3.3.4, Spring Data JPA
-- **Database**: PostgreSQL 16
-- **Orchestration**: Docker Compose
+- Frontend: HTML, CSS, JavaScript
+- Backend: Java (Spring Boot)
+- Database: PostgreSQL (Docker)
 
-## Quick Start (One Command)
+## How to Run
 
-Make sure Docker Desktop is running, then run:
-
+### Option 1: Run with Docker
+1. Make sure Docker Desktop is open.
+2. In the project folder, run:
 ```bash
-docker compose up --build -d
+docker compose up -d
 ```
+3. Open `http://localhost:3000` in your browser.
 
-That's it!
-- **Frontend Game UI**: Open [http://localhost:3000](http://localhost:3000)
-- **Backend REST API**: Running at [http://localhost:8080/api/games](http://localhost:8080/api/games)
-- **PostgreSQL Database**: Running at `localhost:5432`
-
-To stop all services:
+To stop:
 ```bash
 docker compose down
 ```
 
----
-
-## Local Development (Without Dockerizing App)
-
-If you prefer running the backend in your IDE/terminal while developing:
-
-1. Start only PostgreSQL:
-   ```bash
-   docker compose up -d postgres
-   ```
+### Option 2: Run Locally
+1. Start PostgreSQL in Docker:
+```bash
+docker compose up -d postgres
+```
 2. Run backend:
-   ```bash
-   cd backend
-   mvn spring-boot:run
-   ```
+```bash
+cd backend
+mvn spring-boot:run
+```
 3. Open `frontend/index.html` in your browser.
